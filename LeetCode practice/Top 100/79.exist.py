@@ -26,4 +26,3 @@ class Solution:
                 if check(i, j, 0):
                     return True
         return False
-
