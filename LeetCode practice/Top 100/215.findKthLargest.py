@@ -54,10 +54,10 @@ def heapSort(arr):
         heapify(arr, i, 0)
 
 
-# arr = [12, 11, 13, 5, 6, 7]
-# heapSort(arr)
-# n = len(arr)
-# print("排序后")
-# print(arr)
-# for i in range(n):
-#     print("%d" % arr[i])
+arr = [12, 10, 11, 5, 6, 7]
+heapSort(arr)
+n = len(arr)
+print("排序后")
+print(arr)
+for i in range(n):
+    print("%d" % arr[i])
