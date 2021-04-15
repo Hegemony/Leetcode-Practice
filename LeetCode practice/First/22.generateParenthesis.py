@@ -1,17 +1,24 @@
 class Solution:
-    def generateParenthesis(self, n: int) -> List[str]:
-        def dfs(curStr, left, right):
+    def generateParenthesis(self, n: int):
+        res = []
+        tmp = []
+
+        def dfs(left, right):
             if left == n and right == n:
-                res.append(curStr)
+                res.append(''.join(tmp))
                 return
             if left < right:
                 return
             if left < n:
-                dfs(curStr + '(', left + 1, right)
+                tmp.append('(')
+                dfs(left + 1, right)
+                tmp.pop()
             if right < n:
-                dfs(curStr + ')', left, right + 1)
-
-        res = []
-        curStr = ''
-        dfs(curStr, 0, 0)
+                tmp.append(')')
+                dfs(left, right + 1)
+                tmp.pop()
+        dfs(0, 0)
         return res
+
+
+print(Solution().generateParenthesis(3))
