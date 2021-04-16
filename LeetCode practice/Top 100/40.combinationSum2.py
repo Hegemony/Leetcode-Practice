@@ -23,12 +23,4 @@ class Solution:
 
         candidates.sort()
         dfs([], target, 0)
-        # s = set()
-        # for r in res:
-        #     r.sort()
-        #     if tuple(r) not in s:
-        #         s.add(tuple(r))
-        # result = []
-        # for j in s:
-        #     result.append(list(j))
         return res
